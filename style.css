@@ -2,9 +2,9 @@
 html{
     font-size: 100%;
     line-height: 1.2rem;
-    /* text-size adjust is to maintain the text-size even when the users rotates their phone to landscape view */
+    
     -webkit-text-size-adjust: 100%;
-    /* Firefox supports only the android version and safari supports only the ios version at the moment according to MDN (2023)*/
+    
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
@@ -14,10 +14,7 @@ body {
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0px;
 }
-/*-------------------------------------------*/
 
-/* GENERAL */
-/* Fonts */
 .large{
     font-weight: normal;
     line-height: normal;
@@ -27,7 +24,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     margin: 0px;  
-    background-image: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(255, 142, 134)60%);
+    background-image: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(53, 56, 147)60%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -87,29 +84,28 @@ body {
 }
 
 .colorful-letter{
-    background-image: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(255, 142, 134)60%);
+    background-image: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(54, 64, 170)60%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Background colors */
+
 .baby-pink{
-    background-color: rgba(253, 129, 187, 0.3);
+    background-color: rgba(101, 159, 195, 0.3);
     margin: 20px auto;
     padding: 20px;
     text-align: center;
 }
 
 .baby-pink-light{
-    background-color: rgba(243, 162, 200, 0.3);
+    background-color: rgba(43, 138, 222, 0.3);
     margin: 20px auto;
     padding: 20px;
     text-align: center;
 }
 
-/* Setting alignments and sizing */
-/* for the flexbox */
+
 .wrapper{
     max-width: 900px;
     margin: auto;
@@ -127,7 +123,7 @@ body {
     margin: auto;
 }
 
-/* for the grid system */
+
 .grid-system-2{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -140,7 +136,7 @@ body {
     gap: 1rem;
 }
 
-/* other */
+
 .max-width{
     max-width: 450px;
 }
@@ -193,7 +189,7 @@ body {
     margin: 10px;
 }
 
-/* for sticky bottom button */
+
 .flex{
     display: flex;
     flex-direction: column;
@@ -204,29 +200,44 @@ body {
     margin-top: auto;
 }
 
-/* Miscellaneous */
+
 .button{
-    background-color: rgba(253, 129, 187, 0.3);
+    background-color: rgba(26, 69, 97, 0.3);
     padding: 10px;
     text-decoration: none;
     border-radius: 5%;
     color: black;
 }
 
-/* I only used button-outline on this project, but you may like the other one more */
+
 .button-outline{
-    border: 2px solid  rgba(253, 129, 187, 0.3);
+    border: 2px solid  rgba(70, 86, 137, 0.3);
     padding: 10px;
     text-decoration: none;
     border-radius: 5%;
     color: black;
+}
+.download-btn {
+    display: inline-block; 
+    padding: 10px 20px;
+    background-color: #6872b4;
+    color: #fff;
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.download-btn:hover {
+    background-color: #470762; 
 }
 
 .link{
     text-decoration: none;
 }
 
-/* I had to double this code, because of the :hover and :active on link above */
+
 .link-no-scale{
     text-decoration: none;
 }
@@ -242,16 +253,14 @@ body {
 .no-bullet-list{
     list-style-type: none;
 }
-/* ---------------------------------- */
 
-/* ANIMATIONS AND OTHER BEAUTIES */
 .button-outline:hover, .button-outline:active{
-    border: 2px solid  rgba(253, 129, 187, 0.3);
-    background-color: rgba(253, 129, 187, 0.6);
+    border: 2px solid  rgba(109, 121, 230, 0.3);
+    background-color: rgba(106, 109, 197, 0.6);
     padding: 10px;
     text-decoration: none;
     border-radius: 5%;
-    color: rgb(255, 255, 255);
+    color: rgb(190, 221, 244);
     transition: background-color 1s ease, color 1s ease;
 }
 
@@ -259,25 +268,21 @@ body {
     font-size: 1.2rem;
     transform: scale(1.5);
     transition: 1s ease-in-out;
-    /* second solution: */
-    /* font-size: 1.2rem; 
-    transition: font-size 2s ease-in-out;  */
+   
 }
 
 .progress-bar:hover, .progress-bar:active {
-    box-shadow: 5px 5px 5px #cdadcd;
+    box-shadow: 5px 5px 5px #4f6f97;
     transition: box-shadow 1s ease;
 }
 
-/* ---------------------------------- */
 
-/* NAV */
 nav {
     margin-bottom: 30px;
 }
 
 .main-nav{
-    background-color: rgb(253, 249, 249);
+    background-color: rgb(187, 189, 223);
     display: flex;
     list-style-type: none;
     justify-content: center;
@@ -295,19 +300,19 @@ nav {
 }
 
 .main-nav li a:hover {
-    color: rgb(254, 175, 210);
+    color: rgb(103, 31, 218);
     text-decoration: none;
     font-weight: bold;
 }
 
 .sticky {
-    position: -webkit-sticky; /* for Safari */
+    position: -webkit-sticky; 
     position: sticky;
     top: 0;
-    align-self: flex-start; /* <-- this is the fix */
+    align-self: flex-start; 
 }
 
-/* Nav-icon */
+
 .toggle, #drop{
     display: none;
 }
@@ -316,7 +321,7 @@ nav {
     border: 1px solid #df36854d;
     float: right;
     padding: 20px;
-    /* position: relative; */
+    
     user-select: none;
 }
 
@@ -345,7 +350,7 @@ nav {
 .nav-icon::after{
     top: -5px;
 }
-/* ---------------------------------- */
+
 
 /* FOOTER */
 footer{
@@ -353,23 +358,14 @@ footer{
     text-align: center;
     padding: 20px 0px;
 }
-/* ---------------------------------- */
+
 
 /* INTRODUCTION */
 .header-img{
     border-radius: 70%;
 }
-/* ---------------------------------- */
 
-/* ARTICLE */
-/* Everything here is made with general classes. Find them in the GENERAL section */
-/* ---------------------------------- */
 
-/* ABOUT ME */
-/* Everything here is made with general classes. Find them in the GENERAL section */
-/* ---------------------------------- */
-
-/* SKILLS */
 .skills {
     list-style: none;
     text-transform: uppercase;
@@ -385,7 +381,7 @@ footer{
 .progress-bar span {
     height: 10px;
     float: left;
-    background: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(255, 142, 134)60%);
+    background: linear-gradient(135deg, rgb(135, 109, 237)0%, rgb(63, 84, 138)60%);
     border-radius: 20px;
     -webkit-background: linear-gradient(135deg, rgb(250, 113, 283) 0%, rgb(255, 142, 134) 60%);
     -webkit-border-radius: 20px;
@@ -502,10 +498,7 @@ footer{
         width: 75%;
     }
 }
-/* ---------------------------------- */
 
-/* PROJECTS */
-/* I also used these card settings on other sub-pages */
 .card{
     box-shadow: 0 3px 10px rgb(127 110 187 / 0.2); 
     padding: 20px;
@@ -515,9 +508,7 @@ footer{
     display: block;
     width: 100px;
 }
-/* ---------------------------------- */
 
-/* CONTACT ME */
 .box-contact{
     display: block;
     width: 100%; 
@@ -527,14 +518,7 @@ footer{
 .logo{
     width: 50px;
 }
-/* ---------------------------------- */
 
-/* SPECIAL THANKS */
-/* Everything here is made with general classes. Find them in the GENERAL section */
-/* ---------------------------------- */
-
-/* RESPONSIVENESS */
-/* Had to pay attention for that wondow.innerWidth when calculated max-width */
 @media screen and (max-width: 867px){
     body{
         font-size: 90%;
@@ -596,7 +580,7 @@ footer{
     }
 }
 
-/* wrapper on home page looks better with this @media */
+
 @media screen and (max-width: 750px){
     .wrapper{
         flex-direction: column;
@@ -616,7 +600,7 @@ footer{
     }
 }
 
-/* media query for hamburger menu with dropdown */
+
 @media screen and (max-width: 510px){
     .main-nav{
         display: none;
@@ -645,8 +629,7 @@ footer{
     }
 }
 
-/* media query for smaller screens */
-/* smaller fonts were my way to go */
+
 @media screen and (max-width: 377px){
     body{
         line-height: 1.5rem;
@@ -673,7 +656,7 @@ footer{
     }
 }
 
-/* DARK THEME */
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: rgba(45, 45, 45, 1);
